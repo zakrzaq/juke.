@@ -1,10 +1,13 @@
 <script setup lang="ts">
+import { ref } from "vue";
 import NavBar from "./components/NavBar.vue";
+
+const activeId = ref(3);
 </script>
 
 <template>
   <main>
-    <NavBar />
+    <NavBar :activeId="activeId" @setActive="activeId = $event" />
   </main>
 </template>
 
